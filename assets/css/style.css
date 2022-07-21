@@ -97,7 +97,8 @@ aside a{
      padding-top: 15px;
      font-size: 20px;
      font-family: 'Jost', sans-serif;
-     transition-duration: 3s;
+     transition-duration: 3s;+
+     
      
 }
 aside a:hover{
@@ -174,6 +175,18 @@ aside a:hover{
 }
 .comment-icon{
      padding-left: 30px;
+}
+
+.display{
+     
+     text-align: center;
+     background: red;
+     display: inline-block;
+     border-radius: 10px;
+     padding: 5px 10px;
+     margin-top: 20px;
+     margin-left: 600px;
+     visibility: hidden;
 }
 
 footer{
@@ -267,6 +280,7 @@ hr{
 
 /* Responsive area  */
 
+
 @media only screen and (max-width:600px) {
      .banner-section {
           flex-direction: column-reverse;
@@ -276,13 +290,13 @@ hr{
           margin: auto;
      }
      .banner-heading a{
-          font-size: 16px;
+          font-size: 14px;
      }
      .banner-heading h1{
           font-size: 30px;
      }
      .banner-img img{
-          /* width: 250px; */
+          width: 250px;
           height: 300px;
      }
      .container{
@@ -292,9 +306,17 @@ hr{
      aside{
           width: 100%;
           margin: auto;
-          background: #aaa;
+          background: #fff;
+          border: 1px solid #ccc;
+          box-shadow: 1px 1px 1px;
      }
-
+     .aside a{
+          border: #ccc;
+          border-radius: 10px;
+     }
+     .upcoming-match{
+          border: ;
+     }
      .thumbnail-section{
           grid-template-columns: repeat(1, 1fr);
           width:100%;
@@ -307,6 +329,9 @@ hr{
      .team-fixtures{
           grid-template-columns: repeat(1, 1fr);
      }
+     .display{
+          display: none;
+     }
      .flag-style{
 
      }
@@ -315,7 +340,7 @@ hr{
 
 @media only screen and (min-width: 600px) {
      .banner-section {
-          flex-direction: column-reverse;
+          flex-direction: row;
           margin: auto;
      }
      .banner-heading{
@@ -323,7 +348,10 @@ hr{
           margin: auto;
      
      }
-     
+     .aside a{
+          border: #ccc;
+          border-radius: 10px;
+     }
      .banner-heading a{
           font-size: 25px;
           padding: 10px;
@@ -336,8 +364,8 @@ hr{
           width: 100%;
      }
      .banner-img img{
-          /* width: 250px; */
-          height: 300px;
+          width: 250px;
+          /* height: 300px; */
      }
      .container{
           flex-direction: column;
@@ -347,6 +375,8 @@ hr{
           width: 100%;
           margin: auto;
           flex-direction: row;
+          background: #fff;
+          height: 100px;
      }
 
      .thumbnail-section{
@@ -358,8 +388,13 @@ hr{
           flex-direction: column;
           align-items: center
      }
+     .display{
+          visibility: visible;
+          margin-left: 48%;
+     }
      .team-fixtures{
           grid-template-columns: repeat(2, 1fr);
+
      }
 }
 
@@ -392,12 +427,18 @@ hr{
           width:25%;
           flex-direction: column;
           margin-top: 0px;
+          background: black;
+          width: 25%;
+          height: 312px;
      }
 
      .thumbnail-section{
           grid-template-columns: repeat(3, 1fr);
           width:75%;
           margin-left: 10px;
+     }
+     .display{
+          display: none;
      }
      .services ul{
           flex-direction: row;
