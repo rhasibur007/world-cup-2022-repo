@@ -42,6 +42,13 @@ header{
      border-radius: 8px;
      font-size: 20px;
      display: inline-block;
+     transition-duration: 1s;
+}
+.banner-heading a:hover{
+     background: #ddd;
+     color: #000;
+     transform: rotate(360deg);
+     
 }
 .banner-heading a i{
      color: #fff;
@@ -90,24 +97,22 @@ aside a{
      padding-top: 15px;
      font-size: 20px;
      font-family: 'Jost', sans-serif;
-     /* width: 5px;
-     height: 23px;
-     background: red;
-     transition: width 2s; */
+     transition-duration: 3s;
      
 }
-/* aside a:hover{
+aside a:hover{
      background: tomato;
      color: black;
      padding-bottom: 12px;
      font-size: 16px;
      border-radius: 10px;
      width: 100%;
+     transform: rotate(360deg);
      
-} */
+}
 .upcoming-match{
      width: 150px;
-     height: 50px;
+     height: 60px;
      background: #fff;
      border-radius: 8px;
 }
@@ -115,13 +120,10 @@ aside a{
 
 .all-group{
      width: 150px;
-     height: 50px;
+     height: 60px;
      background: #fff;
      border-radius: 8px;
 }
-.blog{
-     width: 150px;
-     height: 50px;
      background: red;
      border-radius: 8px;
      color: #fff;
@@ -287,6 +289,7 @@ hr{
      aside{
           width: 100%;
           margin: auto;
+          background: #aaa;
      }
 
      .thumbnail-section{
@@ -297,6 +300,12 @@ hr{
      .services ul{
           flex-direction: column;
           align-items: center
+     }
+     .team-fixtures{
+          grid-template-columns: repeat(1, 1fr);
+     }
+     .flag-style{
+
      }
 
 }
@@ -346,6 +355,9 @@ hr{
           flex-direction: column;
           align-items: center
      }
+     .team-fixtures{
+          grid-template-columns: repeat(2, 1fr);
+     }
 }
 
 @media only screen and (min-width: 992px) {
@@ -357,10 +369,10 @@ hr{
           /* margin: auto; */
      }
      .banner-heading a{
-          font-size: 16px;
+          font-size: 20px;
      }
      .banner-heading h1{
-          font-size: 30px;
+          font-size: 50px;
      }
      .banner-img{
           width: 50%;
@@ -387,5 +399,8 @@ hr{
      .services ul{
           flex-direction: row;
           align-items: center
+     }
+     .team-fixtures{
+          grid-template-columns: repeat(3, 1fr);
      }
 }
